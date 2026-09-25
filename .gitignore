@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Environment
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Uploads and artifacts (user data, generated charts)
+uploads/
+artifacts/
+sessions/
+# LangGraph checkpoint DB (per-thread conversation state)
+checkpoints.db
+checkpoints.db-journal
+checkpoints.db-shm
+checkpoints.db-wal
+
+# Logs
+*.log
+logs/
