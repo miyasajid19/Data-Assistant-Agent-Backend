@@ -1,9 +1,46 @@
 [project]
-name = "backend"
+name = "data-assistant-agent-backend"
 version = "0.1.0"
-description = "Add your description here"
+description = "LangGraph-powered Data Assistant Agent backend (FastAPI + LangChain + Ollama/MiniMax-M3)."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "langchain>=1.4.2",
+    "langchain-openai>=0.2.0",
+    "langgraph>=0.2.50",
+    "langgraph-checkpoint-sqlite>=2.0.0",
+    "langgraph-checkpoint-postgres>=3.0.0",
+    "psycopg-binary>=3.2.0",
+    "pandas>=2.2.0",
+    "openpyxl>=3.1.2",
+    "matplotlib>=3.8.0",
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.27.0",
+    "python-multipart>=0.0.9",
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.5.0",
+    "numpy>=2.4.6",
+    "seaborn>=0.13.2",
+    "pyarrow>=25.0.1",
+    "fastparquet>=2026.5.0",
+    "aiosqlite>=0.22.1",
+    "langchain-ollama>=1.1.0",
 ]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.3.0",
+    "pytest>=8.0.0",
+    "httpx>=0.27.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
